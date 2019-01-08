@@ -1,0 +1,32 @@
+{
+  "name": "online-academy",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get your application up and running.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ChristopherSelvaraj@bitbucket.org/abhiteshs/online-academy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/abhiteshs/online-academy#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "config": "^1.20.1",
+    "express": "^4.13.4",
+    "express-joi-validator": "^2.0.0",
+    "express-jwt": "^3.3.0",
+    "express-unless": "^0.3.0",
+    "express-winston": "^1.3.0",
+    "jsonwebtoken": "^5.7.0",
+    "request": "^2.72.0",
+    "sqlite3": "^4.0.2",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.1"
+  }
+}

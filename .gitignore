@@ -1,0 +1,4 @@
+_reactComponent/node_modules/
+node_modules/
+.vscode/settings.json
+config/*

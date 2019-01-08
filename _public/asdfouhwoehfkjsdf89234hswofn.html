@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Style Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- loader for this template -->
+    <link href="css/loader.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://apis.google.com/js/platform.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!--  Enabling Bootstrap popover-->
+  <script>
+    $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();
+    });
+
+    $(document).ready(function(){
+      fetch("http://www.globalmathinstitute.com/api/v1/topics")
+        .then(function(res){
+          return res.json();
+        })
+          .then(function(json){
+            console.log(JSON.stringify(json));
+          })
+    })
+  </script>
+
+    <title>Global Math  Institute</title>
+  </head>
+
+  <body>
+    <div style="padding-left:40px;padding-top:40px">
+      <form action="http://www.globalmathinstitute.com/api/v1/video">
+        <div>
+          <label for="label">Label - This will appear as top heading</label>
+          <input name="label" id="label">
+        </div>
+        <div>
+          <label for="url">Embed URL, youtube embed url</label>
+          <input name="url" id="url">
+        </div>
+        <div>
+          <label for="videoLabel">Video Label - this will be label for video</label>
+          <input name="videoLabel" id="videoLabel">
+        </div>
+        <div>
+          <label for="subheading">Subheading - like chapter name/subtopic name</label>
+          <input name="subheading" id="subheading">
+        </div>
+        <div>
+          <label for="content">content - any content of the course</label>
+          <input name="content" id="content">
+        </div>
+        <div>
+          <label for="topicId"> Topic - This video will appear under this topic </label>
+          <select name="topicId">
+            <option value="1">Polynomial</option>
+            <option value="2">Calculus</option>
+            <option value="3">Advanced Functions</option>
+            <option value="7">Vectors</optiion>
+            <option value="8">Construction</option>
+            <option value="9">Data Management</option>
+            <option value="10">Probability</option>
+            <option value="11">Trigonometry</option>
+	    <option value="12">Rational Functions</option>
+	    <option value="13">Linear Systems of Equations</option>
+	    <option value="14">Coordinate Geometry</option>
+	    <option value="15">SAT</option>
+	    <option value="16">IIT-JEE</option>
+	    <option value="17">Middle School Math</option>
+	    <option value="18">High School Math</option>
+	    <option value="19">Junior School Math</option>
+  	    <option value="20">Inequalities</option>
+            <option value="21">Graph Transformed Functions</option>
+          </select>
+        </div>
+        <div>
+          <button>Save</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
